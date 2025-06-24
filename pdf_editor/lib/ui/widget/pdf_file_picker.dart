@@ -3,16 +3,16 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart' as path;
 
-class PdfDropTargetAndPicker extends StatefulWidget {
+class PdfFilePicker extends StatefulWidget {
   final Function(String filePath) onPdfSelected;
 
-  const PdfDropTargetAndPicker({super.key, required this.onPdfSelected});
+  const PdfFilePicker({super.key, required this.onPdfSelected});
 
   @override
-  State<PdfDropTargetAndPicker> createState() => _PdfDropTargetAndPickerState();
+  State<PdfFilePicker> createState() => _PdfFilePickerState();
 }
 
-class _PdfDropTargetAndPickerState extends State<PdfDropTargetAndPicker> {
+class _PdfFilePickerState extends State<PdfFilePicker> {
   bool _isDragging = false;
 
   Future<void> _pickPdf(BuildContext context) async {
